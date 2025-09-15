@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
+    background-color: #87CEEB;
     background: linear-gradient(180deg, #87CEEB 0%, #98FB98 100%);
     display: flex;
     justify-content: center;
@@ -26,6 +27,7 @@ body {
 
 #gameCanvas {
     display: block;
+    background-color: #87CEEB;
     background: linear-gradient(180deg, #87CEEB 0%, #98FB98 100%);
 }
 

@@ -1,10 +1,20 @@
-const canvas = document.getElementById('gameCanvas');
-const ctx = canvas.getContext('2d');
-const scoreElement = document.getElementById('score');
-const startScreen = document.getElementById('startScreen');
-const gameOverScreen = document.getElementById('gameOver');
-const finalScoreElement = document.getElementById('finalScore');
-const restartBtn = document.getElementById('restartBtn');
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initGame();
+});
+
+function initGame() {
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    const scoreElement = document.getElementById('score');
+    const startScreen = document.getElementById('startScreen');
+    const gameOverScreen = document.getElementById('gameOver');
+    const finalScoreElement = document.getElementById('finalScore');
+    const restartBtn = document.getElementById('restartBtn');
+
+    // Debug logging
+    console.log('Canvas found:', !!canvas);
+    console.log('Canvas dimensions:', canvas.width, 'x', canvas.height);
 
 let gameState = 'start';
 let score = 0;
@@ -165,4 +175,5 @@ restartBtn.addEventListener('click', () => {
     gameOverScreen.style.display = 'none';
 });
 
-gameLoop();
+    gameLoop();
+}
